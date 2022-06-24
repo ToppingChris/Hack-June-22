@@ -1,0 +1,245 @@
+{
+  "version": 4,
+  "terraform_version": "1.2.2",
+  "serial": 13,
+  "lineage": "dc86ec6b-9215-8b00-4a72-e4fc60426140",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "google_sql_database",
+      "name": "charity_db",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "charset": "UTF8",
+            "collation": "en_US.UTF8",
+            "id": "projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-charity",
+            "instance": "main-instance",
+            "name": "sharecare-charity",
+            "project": "lloyds-advk8s-team-2",
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-charity",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_sql_database_instance.main"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database",
+      "name": "media_db",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "charset": "UTF8",
+            "collation": "en_US.UTF8",
+            "id": "projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-media",
+            "instance": "main-instance",
+            "name": "sharecare-media",
+            "project": "lloyds-advk8s-team-2",
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-media",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_sql_database_instance.main"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database",
+      "name": "post_db",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "charset": "UTF8",
+            "collation": "en_US.UTF8",
+            "id": "projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-post",
+            "instance": "main-instance",
+            "name": "sharecare-post",
+            "project": "lloyds-advk8s-team-2",
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-post",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_sql_database_instance.main"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database",
+      "name": "user_db",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "charset": "UTF8",
+            "collation": "en_US.UTF8",
+            "id": "projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-user",
+            "instance": "main-instance",
+            "name": "sharecare-user",
+            "project": "lloyds-advk8s-team-2",
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/lloyds-advk8s-team-2/instances/main-instance/databases/sharecare-user",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_sql_database_instance.main"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database_instance",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "clone": [],
+            "connection_name": "lloyds-advk8s-team-2:us-central1:main-instance",
+            "database_version": "POSTGRES_14",
+            "deletion_protection": true,
+            "first_ip_address": "34.71.183.157",
+            "id": "main-instance",
+            "ip_address": [
+              {
+                "ip_address": "34.71.183.157",
+                "time_to_retire": "",
+                "type": "PRIMARY"
+              },
+              {
+                "ip_address": "35.239.49.74",
+                "time_to_retire": "",
+                "type": "OUTGOING"
+              }
+            ],
+            "master_instance_name": "",
+            "name": "main-instance",
+            "private_ip_address": "",
+            "project": "lloyds-advk8s-team-2",
+            "public_ip_address": "34.71.183.157",
+            "region": "us-central1",
+            "replica_configuration": [],
+            "restore_backup_context": [],
+            "root_password": null,
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/lloyds-advk8s-team-2/instances/main-instance",
+            "server_ca_cert": [
+              {
+                "cert": "-----BEGIN CERTIFICATE-----\nMIIDfzCCAmegAwIBAgIBADANBgkqhkiG9w0BAQsFADB3MS0wKwYDVQQuEyQyZmU4\nYWRlYi1lNzg5LTQ0MDktYjY1Ni1iMjg5OGMwMjFjYWQxIzAhBgNVBAMTGkdvb2ds\nZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUsIEluYzELMAkG\nA1UEBhMCVVMwHhcNMjIwNjIzMDkzMTE0WhcNMzIwNjIwMDkzMjE0WjB3MS0wKwYD\nVQQuEyQyZmU4YWRlYi1lNzg5LTQ0MDktYjY1Ni1iMjg5OGMwMjFjYWQxIzAhBgNV\nBAMTGkdvb2dsZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUs\nIEluYzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQCVhvdaa/bUxrHyLLGM9XbY1nHr3Q8Oghjbex4r1dD39M2fMvVqj2bPO/HT2N/h\nElhfGWNYTrIE/8O/SQZsj72cIaNLZKgGQQHYN/m05v3DYKgcnoK2wyJSv7aUmpho\nW8VGbqVBBg/V/fysPqvRBkzc/e3E4+cP7Yy4C8bLOSitDf1OjPaFI9wAfHGpLbfQ\nnCUg2LV6cVkYWEXPOeIIM7dov0EdUITSjYJDqy6o/6lmViLEAWZWNRLz4JokoIBp\nLvrLyLvZUp8yFBI9MFODOmSoi/Rz6u3InMXL3z51fLHRGjvUCJt10E8Eo285DM4u\nWZzSCKCGNb5ZSCeWhBT4+/hnAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYBAf8CAQAw\nDQYJKoZIhvcNAQELBQADggEBAI+BbB0lpaA7vc+Fvsa5xLGMxsTkT0K7xIJGqB7G\nZTNKZdUOcvpqEjDL6ww06XdVAen0l1kQgax/EYRK1u9Ianr0RvfCyKVB+orCwleH\np9oF+VgcUEHzaZU7ebG2wQ3a9dHBsjMXhuHiFUTlm2bk25CC+eMSx8+3y7GMbPbZ\nPWMT54EE1xtYOs+Fj1I8u+7XILY3KvRVjQ0NMNwVuSgegGe72Ulzr6QfoTJf+N36\n4CYYbGpenZGdoa4GxtLfHQR3O4TpyxYLVKm73hPKvOJ8bQ324iO2Cn2Ve6JtYIhv\nKJJttkEDrM0+jWjuIUQtawsqM2bhldO/9G4fSq86p1Dr8YI=\n-----END CERTIFICATE-----",
+                "common_name": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=2fe8adeb-e789-4409-b656-b2898c021cad",
+                "create_time": "2022-06-23T09:31:14.326Z",
+                "expiration_time": "2032-06-20T09:32:14.326Z",
+                "sha1_fingerprint": "b5e86d6316d99afbf8b437d1c3f1605337392c53"
+              }
+            ],
+            "service_account_email_address": "p799576479852-1gx6yo@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+            "settings": [
+              {
+                "activation_policy": "ALWAYS",
+                "active_directory_config": [],
+                "availability_type": "ZONAL",
+                "backup_configuration": [
+                  {
+                    "backup_retention_settings": [
+                      {
+                        "retained_backups": 7,
+                        "retention_unit": "COUNT"
+                      }
+                    ],
+                    "binary_log_enabled": false,
+                    "enabled": false,
+                    "location": "",
+                    "point_in_time_recovery_enabled": false,
+                    "start_time": "14:00",
+                    "transaction_log_retention_days": 7
+                  }
+                ],
+                "collation": "",
+                "database_flags": [],
+                "disk_autoresize": true,
+                "disk_autoresize_limit": 0,
+                "disk_size": 10,
+                "disk_type": "PD_SSD",
+                "insights_config": [],
+                "ip_configuration": [
+                  {
+                    "allocated_ip_range": "",
+                    "authorized_networks": [],
+                    "ipv4_enabled": true,
+                    "private_network": "",
+                    "require_ssl": false
+                  }
+                ],
+                "location_preference": [
+                  {
+                    "follow_gae_application": "",
+                    "zone": "us-central1-b"
+                  }
+                ],
+                "maintenance_window": [],
+                "pricing_plan": "PER_USE",
+                "tier": "db-f1-micro",
+                "user_labels": {},
+                "version": 9
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_user",
+      "name": "users",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "deletion_policy": null,
+            "host": "",
+            "id": "admin//main-instance",
+            "instance": "main-instance",
+            "name": "admin",
+            "password": "pwd",
+            "project": "lloyds-advk8s-team-2",
+            "sql_server_user_details": [],
+            "timeouts": null,
+            "type": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "google_sql_database_instance.main"
+          ]
+        }
+      ]
+    }
+  ]
+}
