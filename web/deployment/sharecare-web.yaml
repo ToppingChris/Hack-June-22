@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sharecare-web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sharecare-web
+  template:
+    metadata:
+      labels:
+        app: sharecare-web
+    spec:
+      containers:
+      - name: sharecare-web-pod
+        image: totipuacr.azurecr.io/sharecare-web:1.0
+        env:
+        - name: BASE_URL
+          value: http://sharecare.tipuric.com
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sharecare-web-svc
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: sharecare-web
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: sharecare-web-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: sharecare.tipuric.com
+    http:
+      paths:
+      - backend:
+          serviceName: sharecare-web-svc
+          servicePort: 80
+        path: /
